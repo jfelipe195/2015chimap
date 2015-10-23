@@ -32,11 +32,18 @@
 <body> 
 <div id="map"></div></div>
 
-<script> 
+<script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYnJpZ2h0bDEiLCJhIjoiRHZRQ0wxRSJ9.ukGv6YWt_Umr4LFMMaxGmQ';
-	var map = L.mapbox.map('map', 'brightl1.jnnpa549').setView([41.8731903, -96.8420169], 5); 
-	).addTo(map);
-	
+// Replace 'mapbox.streets' with your map id.
+var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/brightl1.jnnpa549/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+});
+
+var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setView([42.3610, -71.0587], 15);
+
+
 L.marker([42.606280, -83.150111]).addTo(map)
     .bindPopup("<h3>Troy, MI</h3>Troy, Mi is the city of tomorrow today.  Once home to KMART world headquarters, many tech companies are there.  Read more about <a href='https://en.wikipedia.org/wiki/Troy,_Michigan'>Troy on Wiki</a>")
     .closePopup();
