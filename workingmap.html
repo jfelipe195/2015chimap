@@ -23,7 +23,19 @@ var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/brightl1.jnnpa549/{z}/{
 
 var map = L.map('map')
     .addLayer(mapboxTiles)
-    .setView([42.3610, -71.0587], 15);
+    .setView([42.738335, -84.480312], 15);
+    
+    L.marker([42.606280, -83.150111]).addTo(map)
+    .bindPopup("<h3>Troy, MI</h3>Troy, Mi is the city of tomorrow today.  Once home to KMART world headquarters, many tech companies are there.  Read more about <a href='https://en.wikipedia.org/wiki/Troy,_Michigan'>Troy on Wiki</a>")
+    .closePopup();
+	
+	L.marker([42.3122, -85.2042]).addTo(map)
+    .bindPopup("<h3>Battle Creek, MI</h3>Battle Creek is a small city. Cereal was invented here. Arcadia Brewing Company is downtown, and is totally worth your time. That’s probably all you need to know. <a href='http://en.wikipedia.org/wiki/Battle_Creek,_Michigan'>Battle Creek on Wiki</a>")
+    .closePopup();
+	
+L.marker([36.1667, -86.7833]).addTo(map)
+    .bindPopup("<h3>Nashville, TN</h3>Nashville, TN is known as <em>Music City, USA</em>.  It's one of the greatest cities in the country, in my opinion, and an excellent place to travel to eat, drink, and be merry.  Check out more about it here: <a href='http://www.visitmusiccity.com/'>Visit Music City </a>")
+    .closePopup();
 </script>
 </body>
 </html>
