@@ -35,11 +35,7 @@
 <script> 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYnJpZ2h0bDEiLCJhIjoiRHZRQ0wxRSJ9.ukGv6YWt_Umr4LFMMaxGmQ';
 	var map = L.mapbox.map('map', 'brightl1.jnnpa549').setView([41.8731903, -96.8420169], 5); 
-		 {
-		attribution: 'Map data &copy; <a href="http://mapbox.com">MapBox</a>',
-		maxZoom: 18,
-		minZoom: 1
-	}).addTo(map);
+	).addTo(map);
 	
 L.marker([42.606280, -83.150111]).addTo(map)
     .bindPopup("<h3>Troy, MI</h3>Troy, Mi is the city of tomorrow today.  Once home to KMART world headquarters, many tech companies are there.  Read more about <a href='https://en.wikipedia.org/wiki/Troy,_Michigan'>Troy on Wiki</a>")
